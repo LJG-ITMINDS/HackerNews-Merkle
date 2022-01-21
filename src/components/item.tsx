@@ -56,7 +56,7 @@ const Item: FC<ItemProps> = ({
           <h3>{title}</h3>
         </div>
         <div className={styles.media}>
-          <img src={`../src/assets/${imgId > 0 ? imgId : 1}.png`} alt="" />
+          <img src={`/${imgId > 0 ? imgId : 1}.png`} alt="" />
         </div>
         <div className={`${styles.bottom}`}>
           <h5>{`Published: ${date.toLocaleString()}`}</h5>
