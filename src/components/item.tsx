@@ -46,26 +46,26 @@ const Item: FC<ItemProps> = ({
   }, []);
   const imgId = Math.floor(Math.random() * 8); // Select random image
   return (
-    <div className={`item ${styles.card}`}>
-      <div className={`${styles.header} `}>
-        <h3>
-          {score > 0 ? "+" : "-"}
-          {score}
-        </h3>
-        <h3>{title}</h3>
-      </div>
-      <div className={styles.media}>
-        <img src={`../src/assets/${imgId > 0 ? imgId : 1}.jpg`} alt="" />
-      </div>
-
-      <div className={styles.data}>{url && <a href={url}>{`See more`}</a>}</div>
-      <div className={`${styles.bottom}`}>
-        <h5>{`Published: ${date.toLocaleString()}`}</h5>
-        <div className={styles.credit}>
-          <h5>{`By: ${by}`}</h5>
-          <h5>{`Karma: ${karma}`}</h5>
+    <div className={`item ${styles.card} ${url ? styles.link : ""}`}>
+      <a className={url ? styles.link : styles.hiddenLink} href={url}>
+        <div className={`${styles.header} `}>
+          <h3>
+            {score > 0 ? "+" : "-"}
+            {score}
+          </h3>
+          <h3>{title}</h3>
         </div>
-      </div>
+        <div className={styles.media}>
+          <img src={`../src/assets/${imgId > 0 ? imgId : 1}.png`} alt="" />
+        </div>
+        <div className={`${styles.bottom}`}>
+          <h5>{`Published: ${date.toLocaleString()}`}</h5>
+          <div className={styles.credit}>
+            <h5>{`By ${by}`}</h5>
+            <h5>{`Author karma: ${karma}`}</h5>
+          </div>
+        </div>
+      </a>
     </div>
   );
 };
