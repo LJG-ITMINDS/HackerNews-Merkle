@@ -39,6 +39,7 @@
   display: grid;
   grid-area: media;
   grid-template-columns: 1fr;
+  margin-bottom: 1.5rem;
 }
 .media img {
   width: 100%;
