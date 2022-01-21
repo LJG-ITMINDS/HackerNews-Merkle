@@ -23,8 +23,10 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  /* color: #0070f3; */
+  /* border-color: #0070f3; */
+  color: #03a61c;
+  border-color: #03a61c;
   transform: scale(1.05);
 }
 .data {
@@ -49,7 +51,6 @@
 .data a:hover {
   transform: scale(1.05);
   box-shadow: 2px 2px grey;
-  color: #0070f3;
 }
 .media {
   display: grid;
